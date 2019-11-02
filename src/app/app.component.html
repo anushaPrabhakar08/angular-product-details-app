@@ -1,0 +1,17 @@
+<div class="body">
+  <mat-toolbar>
+
+    Angular Product Details App
+
+    <div fxLayout="row" fxFlex="100%" fxLayoutAlign="end center">
+      <nav mat-tab-nav-bar [backgroundColor]="background">
+        <a mat-tab-link routerLink="/productadd">
+          <mat-icon class="icon-class" aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+        </a>
+      </nav>
+    </div>
+  </mat-toolbar>
+</div>
+
+
+<router-outlet></router-outlet>

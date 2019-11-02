@@ -1,0 +1,41 @@
+<div fxLayout="row" fxFlex="100%" fxLayoutAlign="center" class="details-body">
+    <div class="product-details-card">
+
+        <mat-card class="card-class">
+            <form class="example-form">
+                <div>
+                    <mat-icon class="icon-list-class" aria-hidden="false" aria-label="Example home icon">list</mat-icon>
+                </div><br />
+
+                <div class="content">
+                    <div class="label-class">
+                        <label class="label"> Product Name :</label> {{ productName }}
+                    </div>
+                    <div class="label-class">
+                        <label class="label"> Price Price : </label>{{price}} 
+                    </div>
+                </div><br/>
+                
+
+                <div style="display: flex;">
+                    <div>
+                        <button class="save-button">
+                            <mat-icon class="icon-list-class" aria-hidden="false" aria-label="Example home icon"
+                                (click)="redirectToProductView()"> edit
+                            </mat-icon>
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="save-button">
+                            <mat-icon class="icon-deletebtn-class" aria-hidden="false" aria-label="Example home icon"
+                                (click)="delete()">delete
+                            </mat-icon>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </mat-card>
+    </div>
+</div>

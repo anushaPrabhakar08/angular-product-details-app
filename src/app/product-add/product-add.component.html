@@ -1,0 +1,50 @@
+<div fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+
+    <div class="product-add-card">
+        <mat-card class="card-class">
+
+            <form class="example-form" #productform="ngForm" (ngSubmit)="onSave(productform.value)">
+                <div>
+                    <mat-icon class="icon-list-class" aria-hidden="false" aria-label="Example home icon">list</mat-icon>
+                </div><br />
+
+                <div>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Product Name" name="pname" [(ngModel)]="productName" required>
+                        <mat-error *ngIf="hasError('pname', 'required')">Product Name is required</mat-error>
+                        <mat-error *ngIf="hasError('pname', 'maxlength')">You have more than 60 characters</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field class="example-full-width">
+                        <textarea matInput placeholder="Leave a comment" name="pdescription"
+                            [(ngModel)]="productDescription" ngModel required></textarea>
+                        <mat-error *ngIf="hasError('pdescription', 'required')">Description is required</mat-error>
+                        <mat-error *ngIf="hasError('pdescription', 'maxlength')">You have more than 60 characters</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field class="example-full-width">
+                        <input type="tel" matInput placeholder="Product Price" name="price" [(ngModel)]="productPrice"
+                            pattern="^\d*[0-9]\d*$" ngModel required>
+                        <mat-error *ngIf="hasError('price', 'required')">Price is required!</mat-error>
+                        <mat-error *ngIf="hasError('price', 'pattern')">Only positive or 0!</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <button type="submit" class="save-button" [disabled]="!productform.valid">
+                        <mat-icon class="icon-savebtn-class" aria-hidden="false" aria-label="Example home icon">save
+                        </mat-icon>
+                    </button>
+                </div>
+
+            </form>
+
+        </mat-card>
+
+    </div>
+
+</div>

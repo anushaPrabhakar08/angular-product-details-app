@@ -1,0 +1,11 @@
+.product-dashboard-card {
+    width: 80% !important;
+  }
+  .mat-table{
+      width: 100% !important;
+  }
+
+  .mat-header-cell{
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }

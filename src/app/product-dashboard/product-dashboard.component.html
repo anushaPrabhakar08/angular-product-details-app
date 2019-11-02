@@ -1,0 +1,28 @@
+<div fxLayout="row" fxFlex="100%" fxLayoutAlign="center">
+
+    <div class="product-dashboard-card">
+        <mat-card>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="pname">
+                    <th mat-header-cell *matHeaderCellDef> Product Name </th>
+                    <td (click)="redirectToProductView(element._id)" mat-cell *matCellDef="let element"> {{element.pname}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> Product Price </th>
+                    <td (click)="redirectToProductView(element._id)" mat-cell *matCellDef="let element"> {{element.price}}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+
+        </mat-card>
+
+    </div>
+
+</div>
